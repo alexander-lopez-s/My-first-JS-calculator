@@ -1,6 +1,6 @@
 {
   "language": "en",
-  "words": [],
+  "words": ["Calibri", "Cristobal"],
   "ignorePaths": [
     "node_modules/**",
     "package.json",

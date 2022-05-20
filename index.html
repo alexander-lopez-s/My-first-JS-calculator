@@ -1,12 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./client/assets/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>project!</title>
+<html>
 
-    <link href="./styles/index.css" rel="stylesheet" />
-  </head>
-  <body></body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>JS calculator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>JS basic calculator</h1>
+  <!--- A table will be the frame for the calculator buttons-->
+  <table border="2" align="center">
+    <tr>
+      <td colspan="4"><input type="text" placeholder="0" id="result" /></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <!--- assigning the JS function to the clear button that will let me erase content in the calculator screen-->
+        <input type="button" value="clear" onclick="clr()" />
+      </td>
+      <!--- adding the function that will let the user see what they type in the screen of the calculator-->
+      <td><input type="button" value="/" onclick="display('/')" /></td>
+    </tr>
+
+    <tr>
+      <td><input type="button" value="1" onclick="display('1')" /></td>
+      <td><input type="button" value="2" onclick="display('2')" /></td>
+      <td><input type="button" value="3" onclick="display('3')" /></td>
+      <td><input type="button" value="x" onclick="display('*')" /></td>
+    </tr>
+
+    <tr>
+      <td><input type="button" value="4" onclick="display('4')" /></td>
+      <td><input type="button" value="5" onclick="display('5')" /></td>
+      <td><input type="button" value="6" onclick="display('6')" /></td>
+      <td><input type="button" value="-" onclick="display('-')" /></td>
+    </tr>
+
+    <tr>
+      <td><input type="button" value="7" onclick="display('7')" /></td>
+      <td><input type="button" value="8" onclick="display('8')" /></td>
+      <td><input type="button" value="9" onclick="display('9')" /></td>
+      <td><input type="button" value="+" onclick="display('+')" /></td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <input type="button" value="0" onclick="display('0')" />
+      </td>
+      <td><input type="button" value="." onclick="display('.')" /></td>
+      <!--- the = button will contain the math instructions and will pass the information to the calculator screen-->
+      <td><input type="button" value="=" onclick="calculate()" /></td>
+    </tr>
+    <p class="credits">By Cristobal Lopez</p>
+    <script src="script.js"></script>
+  </table>
+</body>
+
 </html>
